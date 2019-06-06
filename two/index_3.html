@@ -62,6 +62,7 @@ input[type=text] {
     <h1 align="center"> Table </h1><br>
     <div align="center">
     <input type="text" id="myInput" placeholder="Search for names.." title="Type in a name"><br>
+    <input type="button" id="btn1" value="GO!">
     </div>
     <br>
     <table align="center" class="minimalistBlack">
@@ -97,8 +98,8 @@ input[type=text] {
     </table>
         <script>
                 $(document).ready(function(){
-                  $("#myInput").on("keyup", function() {
-                    var value = $(this).val().toLowerCase();
+                  $("#btn1").click(function() {
+                    var value = $("#myInput").val().toLowerCase();
                        $("#myTable tr").filter(function() {
                         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                     });
